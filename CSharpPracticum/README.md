@@ -1,4 +1,4 @@
-﻿# CSharpPracticum (Ветка main)
+﻿# CSharpPracticum 
 
 Практикум по C#: консольное меню с заданиями по уровням.
 
