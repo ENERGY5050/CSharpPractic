@@ -1,5 +1,6 @@
 ﻿using CSharpPracticum.Common;
 using CSharpPracticum.Tasks.Level1;
+using CSharpPracticum.Tasks.Level2;
 
 namespace CSharpPracticum.Menu;
 
@@ -28,6 +29,8 @@ public sealed class MenuRunner
                     CreateLevel1Menu().Run();
                     break;
                 case "2":
+                    CreateLevel2Menu().Run();
+                    break;
                 case "3":
                     Console.WriteLine("Этот уровень пока не реализован. Нажмите Enter...");
                     Console.ReadLine();
@@ -66,5 +69,33 @@ public sealed class MenuRunner
             new Task15_GitBasics(),
         };
         return new LevelMenu("Уровень 1: Базовый", tasks);
+    }
+
+    private static LevelMenu CreateLevel2Menu()
+    {
+        var tasks = new List<ITask>
+        {
+            new Task16_StringExtensions(),
+            new Task17_StringBuilderBench(),
+            new Task18_TryParseVsCatch(),
+            new Task19_CustomStackQueue(),
+            new Task20_Generics(),
+            new Task21_DayOfWeekEnum(),
+            new Task22_ParamsAndOverload(),
+            new Task23_NullableTypes(),
+            new Task24_OopAnimals(),
+            new Task25_ShapesSorting(),
+            new Task26_StrategyPattern(),
+            new Task27_StudentComparable(),
+            new Task28_EqualsHashCode(),
+            new Task29_FactoryPattern(),
+            new Task30_BankAccountException(),
+            new Task31_DisposableFile(),
+            new Task32_PropertiesValidation(),
+            new Task33_LinqEmployees(),
+            new Task34_LinqGrouping(),
+            new Task35_GitAdvanced(),
+        };
+        return new LevelMenu("Уровень 2: Средний", tasks);
     }
 }
