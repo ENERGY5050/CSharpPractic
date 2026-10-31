@@ -1,6 +1,7 @@
 ﻿using CSharpPracticum.Common;
 using CSharpPracticum.Tasks.Level1;
 using CSharpPracticum.Tasks.Level2;
+using CSharpPracticum.Tasks.Level3;
 
 namespace CSharpPracticum.Menu;
 
@@ -32,8 +33,7 @@ public sealed class MenuRunner
                     CreateLevel2Menu().Run();
                     break;
                 case "3":
-                    Console.WriteLine("Этот уровень пока не реализован. Нажмите Enter...");
-                    Console.ReadLine();
+                    CreateLevel3Menu().Run();
                     break;
                 case "0":
                 case "4":
@@ -97,5 +97,22 @@ public sealed class MenuRunner
             new Task35_GitAdvanced(),
         };
         return new LevelMenu("Уровень 2: Средний", tasks);
+    }
+    private static LevelMenu CreateLevel3Menu()
+    {
+        var tasks = new List<ITask>
+        {
+            new Task36_Duplicates(),
+            new Task37_Fibonacci(),
+            new Task38_ListVsLinkedList(),
+            new Task39_YieldReturn(),
+            new Task40_AsyncAwait(),
+            new Task41_TaskWhenAll(),
+            new Task42_CancellationToken(),
+            new Task43_Exceptions(),
+            new Task44_TodoList(),
+            new Task45_Library(), 
+        };
+        return new LevelMenu("Уровень 3: Продвинутый", tasks);
     }
 }
