@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpPracticum.Tasks.Level3
+namespace CSharpPracticum.database
 {
-    internal class Task45_JsonLinq
+    class sql_notes
     {
     }
 }
